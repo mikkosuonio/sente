@@ -41,7 +41,8 @@
 
       chsk-server
       (sente/make-channel-socket-server!
-       (get-sch-adapter) {:packer packer})
+       (get-sch-adapter) {:packer packer
+                          :ws-kalive-ms 70000})
 
       {:keys [ch-recv send-fn connected-uids
               ajax-post-fn ajax-get-or-ws-handshake-fn]}

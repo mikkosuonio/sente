@@ -42,7 +42,8 @@
       (sente/make-channel-socket-client!
         "/chsk" ; Must match server Ring routing URL
         {:type   rand-chsk-type
-         :packer packer})]
+         :packer packer
+         :ws-kalive-ms 60000})]
 
   (def chsk       chsk)
   (def ch-chsk    ch-recv) ; ChannelSocket's receive channel
