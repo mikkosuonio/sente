@@ -31,7 +31,7 @@
 ;;;; Define our Sente channel socket (chsk) client
 
 (let [;; For this example, select a random protocol:
-      rand-chsk-type (if (>= (rand) 0.5) :ajax :auto)
+      rand-chsk-type :ws #_(if (>= (rand) 0.5) :ajax :auto)
       _ (->output! "Randomly selected chsk type: %s" rand-chsk-type)
 
       ;; Serializtion format, must use same val for client + server:
