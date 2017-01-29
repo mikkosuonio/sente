@@ -43,7 +43,7 @@
         "/chsk" ; Must match server Ring routing URL
         {:type   rand-chsk-type
          :packer packer
-         :ws-kalive-ms 60000})]
+         :ws-kalive-ms 600000})]
 
   (def chsk       chsk)
   (def ch-chsk    ch-recv) ; ChannelSocket's receive channel
